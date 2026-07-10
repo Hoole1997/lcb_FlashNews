@@ -2,6 +2,8 @@ package com.example.lcb.app
 
 import com.blankj.utilcode.util.LogUtils
 import com.example.lcb.app.ad.LcbAdInitializer
+import com.example.lcb.app.news.ui.NewsDetailActivity
+import com.example.lcb.app.weather.ad.WeatherInterstitialGate
 import net.corekit.metrics.adjust.AdjustTracker
 
 class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
@@ -11,7 +13,7 @@ class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
         var lcbApp: LcbApp? = null
 
         fun backLaunchActivity() {
-            lcbApp?.smartbackuptoolsignal()
+            lcbApp?.ultrasafecorehub()
         }
     }
 
@@ -19,6 +21,7 @@ class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
         super.onCreate()
         lcbApp = this
         LcbAdInitializer.initialize(this)
+        WeatherInterstitialGate.install()
         this.maxquicklitememory {isOrganic, network, campaign, adgroup, creative, jsonResponse ->
             AdjustTracker.init(
                 context = applicationContext,
@@ -33,13 +36,15 @@ class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
 
     }
 
-    override fun smartbackuptoolsignal(): Class<in Any>? {
+    override fun scanlitequicktoollocker(): Class<in Any>? {
         return MainActivity::class.java as Class<in Any>?
     }
 
-    override fun prodailysmartmemory(): List<Class<in Any>?>? {
+    override fun metaautovault(): List<Class<in Any>?>? {
+        // 这里只返回当前业务自己的 Activity；库模块 Activity 由各自模块维护，不在宿主侧混入。
         return listOf(
-            MainActivity::class.java
+            MainActivity::class.java,
+            NewsDetailActivity::class.java,
         ) as List<Class<in Any>?>?
     }
 

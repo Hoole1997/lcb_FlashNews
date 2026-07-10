@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="flash_category_tab_height">34dp</dimen>
+    <dimen name="flash_category_tab_horizontal_padding">12dp</dimen>
+    <dimen name="flash_bottom_nav_icon_size">22dp</dimen>
+    <dimen name="flash_bottom_nav_item_height">52dp</dimen>
+    <dimen name="flash_bottom_nav_item_padding_bottom">3dp</dimen>
+    <dimen name="flash_bottom_nav_item_padding_top">5dp</dimen>
+    <dimen name="flash_home_header_height">118dp</dimen>
+    <dimen name="flash_home_toolbar_height">50dp</dimen>
+    <dimen name="flash_home_top_bg_height">111dp</dimen>
+    <dimen name="flash_news_list_item_slide_distance">18dp</dimen>
+</resources>

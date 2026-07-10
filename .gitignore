@@ -1,17 +1,23 @@
+# Gradle / Kotlin 编译缓存和各模块构建产物
+.gradle/
+**/.gradle/
+.kotlin/
+**/.kotlin/
+**/build/
+
+# Android Studio 本地状态
 *.iml
-.gradle
 .idea/
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+captures/
+.externalNativeBuild/
+.cxx/
+
+# 本机配置与系统缓存
 local.properties
-/build.config.properties
+build.config.properties
+.DS_Store
+
+# 本地打包产物
+*.apk
+*.aab
+*.ap_

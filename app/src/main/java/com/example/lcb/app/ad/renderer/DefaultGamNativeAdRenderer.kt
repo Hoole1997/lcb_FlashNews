@@ -27,7 +27,7 @@ class DefaultGamNativeAdRenderer(
         val descView = adView.findViewById<TextView>(R.id.tv_ad_description)
 
         titleView?.text = nativeAd.headline.orEmpty()
-        ctaButton?.text = nativeAd.callToAction ?: "INSTALL"
+        ctaButton?.text = nativeAd.callToAction ?: adView.context.getString(R.string.flash_ad_cta_install)
         descView?.text = nativeAd.body.orEmpty()
         nativeAd.icon?.drawable?.let {
             iconView?.setImageDrawable(it)

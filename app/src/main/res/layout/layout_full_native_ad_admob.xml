@@ -106,7 +106,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    tools:text="INSTALL" />
+                    tools:text="@string/flash_ad_cta_install" />
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>

@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "मुख्य समाचार",
+      "feeds": [
+        { "source": "BBC हिंदी", "url": "https://feeds.bbci.co.uk/hindi/rss.xml", "weight": 3 },
+        { "source": "आज तक", "url": "https://www.aajtak.in/rssfeeds/?id=home", "weight": 3 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "भारत",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/national/rssfeed.xml", "weight": 3 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "दुनिया",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/international/rssfeed.xml", "weight": 3 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "व्यापार",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/business/rssfeed.xml", "weight": 3 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "टेक्नोलॉजी",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/gadgets/rssfeed.xml", "weight": 3 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "खेल",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/sports/rssfeed.xml", "weight": 3 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "मनोरंजन",
+      "feeds": [
+        { "source": "हिन्दुस्तान", "url": "https://api.livehindustan.com/feeds/rss/entertainment/rssfeed.xml", "weight": 3 }
+      ]
+    }
+  ]
+}

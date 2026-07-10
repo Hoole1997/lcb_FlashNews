@@ -27,9 +27,9 @@ class DefaultAdmobFullScreenNativeAdRenderer : AdmobFullScreenNativeAdRenderer {
         val iconView = adView.findViewById<ImageView>(R.id.iv_ad_icon)
         val mediaView = adView.findViewById<MediaView>(R.id.mv_ad_media)
 
-        titleView?.text = nativeAd.headline ?: "Test Google Ads"
-        descView?.text = nativeAd.body ?: "Test Google Ads"
-        ctaButton?.text = nativeAd.callToAction ?: "Open"
+        titleView?.text = nativeAd.headline ?: adView.context.getString(R.string.flash_ad_test_google)
+        descView?.text = nativeAd.body ?: adView.context.getString(R.string.flash_ad_test_google)
+        ctaButton?.text = nativeAd.callToAction ?: adView.context.getString(R.string.flash_ad_cta_open)
 
         nativeAd.icon?.let { icon ->
             iconView?.setImageDrawable(icon.drawable)

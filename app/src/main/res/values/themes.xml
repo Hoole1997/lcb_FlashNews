@@ -3,7 +3,23 @@
     <style name="Base.Theme.LCB_Template" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowBackground">@color/flash_page_bg</item>
+        <item name="android:colorAccent">@color/flash_red</item>
+        <item name="colorAccent">@color/flash_red</item>
     </style>
 
     <style name="Theme.LCB_Template" parent="Base.Theme.LCB_Template" />
+
+    <style name="ShapeAppearanceOverlay_Flash_Rounded10">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_Flash_Rounded12">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="TextAppearance_Flash_BottomNav">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

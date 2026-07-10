@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "主要ニュース",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "weight": 3 },
+        { "source": "毎日新聞", "url": "https://mainichi.jp/rss/etc/mainichi-flash.rss", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "weight": 3 },
+        { "source": "BBC 日本語", "url": "https://feeds.bbci.co.uk/japanese/rss.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "国内",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/politics.rdf", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "国際",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/international.rdf", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "経済",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/business.rdf", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "科学・技術",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/science.rdf", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "スポーツ",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat7.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/sports.rdf", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "文化・エンタメ",
+      "feeds": [
+        { "source": "NHK", "url": "https://www3.nhk.or.jp/rss/news/cat2.xml", "weight": 3 },
+        { "source": "朝日新聞", "url": "https://www.asahi.com/rss/asahi/culture.rdf", "weight": 2 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "Últimas notícias",
+      "feeds": [
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml", "weight": 3 },
+        { "source": "BBC Brasil", "url": "https://feeds.bbci.co.uk/portuguese/rss.xml", "weight": 3 },
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/", "weight": 3 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "Brasil",
+      "feeds": [
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/politica/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "Mundo",
+      "feeds": [
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/mundo/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Economia",
+      "feeds": [
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/economia/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Tecnologia",
+      "feeds": [
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/tecnologia/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/geral/feed.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Esportes",
+      "feeds": [
+        { "source": "ge", "url": "https://ge.globo.com/rss/ge/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "Entretenimento",
+      "feeds": [
+        { "source": "G1", "url": "https://g1.globo.com/rss/g1/pop-arte/", "weight": 3 },
+        { "source": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/cultura/feed.xml", "weight": 2 }
+      ]
+    }
+  ]
+}

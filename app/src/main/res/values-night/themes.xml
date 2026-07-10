@@ -3,5 +3,8 @@
     <style name="Base.Theme.LCB_Template" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:windowBackground">@color/flash_page_bg</item>
+        <item name="android:colorAccent">@color/flash_red</item>
+        <item name="colorAccent">@color/flash_red</item>
     </style>
 </resources>

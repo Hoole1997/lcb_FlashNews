@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "Главные новости",
+      "feeds": [
+        { "source": "BBC Русская служба", "url": "https://feeds.bbci.co.uk/russian/rss.xml", "weight": 3 },
+        { "source": "Коммерсантъ", "url": "https://www.kommersant.ru/RSS/news.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "Россия",
+      "feeds": [
+        { "source": "Meduza", "url": "https://meduza.io/rss/all", "weight": 3 },
+        { "source": "ТАСС", "url": "https://tass.ru/rss/v2.xml", "weight": 2 },
+        { "source": "Ведомости", "url": "https://www.vedomosti.ru/rss/rubric/politics", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "Мир",
+      "feeds": [
+        { "source": "DW Русский", "url": "https://rss.dw.com/rdf/rss-ru-all", "weight": 3 },
+        { "source": "Ведомости", "url": "https://www.vedomosti.ru/rss/rubric/politics/international", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Бизнес",
+      "feeds": [
+        { "source": "РБК", "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss", "weight": 3 },
+        { "source": "Ведомости", "url": "https://www.vedomosti.ru/rss/rubric/economics", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Технологии",
+      "feeds": [
+        { "source": "Хабр", "url": "https://habr.com/ru/rss/articles/?fl=ru", "weight": 3 },
+        { "source": "Ведомости", "url": "https://www.vedomosti.ru/rss/rubric/technology/internet", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Спорт",
+      "feeds": [
+        { "source": "Sports.ru", "url": "https://www.sports.ru/rss/all_news.xml", "weight": 3 },
+        { "source": "Чемпионат", "url": "https://www.championat.com/rss/news/", "weight": 2 }
+      ]
+    }
+  ]
+}

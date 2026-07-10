@@ -259,6 +259,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.recyclerview)
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.config)
@@ -275,11 +280,13 @@ dependencies {
 //    implementation(project(":bill"))
 //    implementation(project(":core"))
     implementation(project(":metrics"))
+    implementation(project(":news"))
+    implementation(project(":weather"))
     implementation("com.github.toukaremax:core:1.0.11")
-    implementation("com.github.toukaremax:bill:lcb_1.0") {
+    implementation("com.github.toukaremax:bill:1.0.38") {
         // Launcher SDK provides com.unity3d.ads-mediation:mediation-sdk:9.2.0.
         // Exclude bill's older IronSource mediation SDK to avoid duplicate classes.
         exclude(group = "com.ironsource.sdk", module = "mediationsdk")
     }
-    implementation("com.launcher.unity:com.leafmotivation.quizguessoncolor-dev:1.0.1")
+    implementation("com.launcher.unity:com.leafmotivation.quizguessoncolor-flashnews:1.0.1")
 }

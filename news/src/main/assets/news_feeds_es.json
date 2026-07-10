@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "Últimas noticias",
+      "feeds": [
+        { "source": "France 24 Español", "url": "https://www.france24.com/es/rss", "weight": 3 },
+        { "source": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml", "weight": 3 },
+        { "source": "DW Español", "url": "https://rss.dw.com/rdf/rss-sp-all", "weight": 2 },
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada", "weight": 3 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "España",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/portada", "weight": 3 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "Mundo",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada", "weight": 3 },
+        { "source": "France 24 Español", "url": "https://www.france24.com/es/europa/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Economía",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/economia/portada", "weight": 3 },
+        { "source": "France 24 Español", "url": "https://www.france24.com/es/econom%C3%ADa/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Tecnología",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada", "weight": 3 },
+        { "source": "Xataka", "url": "https://feeds.weblogssl.com/xataka2", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Deportes",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/deportes/portada", "weight": 3 },
+        { "source": "France 24 Español", "url": "https://www.france24.com/es/deportes/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "Cultura",
+      "feeds": [
+        { "source": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/cultura/portada", "weight": 3 },
+        { "source": "France 24 Español", "url": "https://www.france24.com/es/cultura/rss", "weight": 2 }
+      ]
+    }
+  ]
+}

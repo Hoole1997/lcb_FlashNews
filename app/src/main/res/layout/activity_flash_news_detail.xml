@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/detailRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/white">
+  <com.google.android.material.appbar.MaterialToolbar android:id="@+id/detailToolbar" android:layout_width="0dp" android:layout_height="54dp" android:background="@android:color/white" android:minHeight="54dp" android:paddingEnd="8dp" app:contentInsetEndWithActions="8dp" app:contentInsetStartWithNavigation="0dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationIconTint="@color/flash_text_primary">
+    <TextView android:id="@+id/detailToolbarTitle" android:layout_width="match_parent" android:layout_height="match_parent" android:ellipsize="end" android:gravity="center_vertical" android:includeFontPadding="false" android:maxLines="1" android:paddingEnd="52dp" android:textColor="@color/flash_text_primary" android:textSize="15sp" android:textStyle="bold"/>
+    <ImageButton android:id="@+id/detailBookmarkButton" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="end|center_vertical" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/flash_cd_bookmark" android:padding="12dp" android:src="@drawable/ic_flash_bookmark_outline" app:tint="@color/flash_text_primary"/>
+  </com.google.android.material.appbar.MaterialToolbar>
+  <View android:id="@+id/detailToolbarDivider" android:layout_width="0dp" android:layout_height="1dp" android:background="@color/flash_divider" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/detailToolbar"/>
+  <com.example.lcb.app.news.ui.NewsWebProgressView android:id="@+id/detailWebProgress" android:layout_width="0dp" android:layout_height="3dp" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/detailToolbarDivider"/>
+  <LinearLayout android:id="@+id/detailBodyLayout" android:layout_width="0dp" android:layout_height="0dp" android:orientation="vertical" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/detailWebProgress">
+    <FrameLayout android:id="@+id/detailContentFrame" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+      <androidx.core.widget.NestedScrollView android:id="@+id/detailContentScroll" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:fillViewport="true" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="16dp">
+          <TextView android:id="@+id/detailTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="1dp" android:textColor="@color/flash_text_primary" android:textIsSelectable="true" android:textSize="18sp" android:textStyle="bold"/>
+          <LinearLayout android:id="@+id/detailMetaRow" android:layout_width="match_parent" android:layout_height="20dp" android:layout_marginTop="13dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <ImageView android:id="@+id/detailSourceAvatar" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/bg_flash_source_avatar" android:contentDescription="@null" android:scaleType="centerCrop"/>
+            <TextView android:id="@+id/detailSource" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="6dp" android:gravity="center_vertical" android:textColor="@color/flash_text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/detailDate" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="12dp" android:gravity="center_vertical" android:textColor="@color/flash_text_tertiary" android:textSize="12sp"/>
+          </LinearLayout>
+          <TextView android:id="@+id/detailLead" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:lineSpacingMultiplier="1.08" android:textColor="@color/flash_text_primary" android:textIsSelectable="true" android:textSize="16sp"/>
+          <com.google.android.material.imageview.ShapeableImageView android:id="@+id/detailImage" android:layout_width="match_parent" android:layout_height="176dp" android:layout_marginTop="14dp" android:contentDescription="@null" android:scaleType="centerCrop" app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_Flash_Rounded10"/>
+          <TextView android:id="@+id/detailBodyOne" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingMultiplier="1.08" android:textColor="@color/flash_text_primary" android:textIsSelectable="true" android:textSize="16sp"/>
+          <TextView android:id="@+id/detailBodyTwo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:lineSpacingMultiplier="1.08" android:textColor="@color/flash_text_primary" android:textIsSelectable="true" android:textSize="16sp"/>
+          <LinearLayout android:id="@+id/detailOriginalRow" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/detailPlatformSource" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:ellipsize="end" android:gravity="center_vertical" android:maxLines="1" android:textColor="@color/flash_text_tertiary" android:textSize="13sp"/>
+            <TextView android:id="@+id/detailOpenOriginal" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true" android:focusable="true" android:gravity="center" android:paddingStart="16dp" android:paddingEnd="2dp" android:text="@string/flash_news_open_original" android:textColor="@color/flash_red" android:textSize="13sp" android:textStyle="bold"/>
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.core.widget.NestedScrollView>
+      <WebView android:id="@+id/detailWebView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+      <LinearLayout
+          android:id="@+id/detailWebError"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          android:visibility="gone">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_flash_wifi_offline" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/flash_web_error_title"
+            android:textColor="@color/flash_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/flash_web_error_message"
+            android:textColor="@color/flash_text_secondary"
+            android:textSize="14sp" />
+        <ProgressBar
+            android:id="@+id/detailWebRetryProgress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/flash_red"
+            android:visibility="invisible" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detailWebRetry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/flash_web_error_retry"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/flash_red"
+            app:cornerRadius="10dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detailWebOpenBrowser"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/flash_web_error_open_browser"
+            android:textAllCaps="false"
+            android:textColor="@color/flash_text_primary" />
+      </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/detailBottomAdContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:color/white" android:paddingStart="16dp" android:paddingTop="8dp" android:paddingEnd="16dp" android:paddingBottom="10dp" android:visibility="gone"/>
+    <!-- 统一承接手势导航和传统三键导航安全区，确保正文、WebView、错误页和广告整体位于系统按钮上方。 -->
+    <View
+        android:id="@+id/detailNavigationBarSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:importantForAccessibility="no" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

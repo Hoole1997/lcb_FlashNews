@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "Top News",
+      "feeds": [
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/rss.xml", "weight": 3 },
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml", "weight": 3 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1001/rss.xml", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/main", "weight": 2 },
+        { "source": "NBC News", "url": "https://feeds.nbcnews.com/feeds/topstories", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "U.S.",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml", "weight": 3 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/us-news/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1003/rss.xml", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/us", "weight": 2 },
+        { "source": "NBC News", "url": "https://feeds.nbcnews.com/feeds/usnews", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "World",
+      "feeds": [
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "weight": 3 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/world/rss", "weight": 3 },
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "weight": 3 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1004/rss.xml", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/world", "weight": 2 },
+        { "source": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "weight": 2 },
+        { "source": "DW", "url": "https://rss.dw.com/rdf/rss-en-all", "weight": 2 }
+      ]
+    },
+    {
+      "key": "politics",
+      "title": "Politics",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "weight": 3 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/us-news/us-politics/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1014/rss.xml", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/politics", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Business",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "weight": 3 },
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/business/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1017/rss.xml", "weight": 2 },
+        { "source": "CNBC", "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Technology",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "weight": 3 },
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/technology/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1019/rss.xml", "weight": 2 },
+        { "source": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 2 },
+        { "source": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "science",
+      "title": "Science",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "weight": 3 },
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/science/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1007/rss.xml", "weight": 2 },
+        { "source": "NASA", "url": "https://www.nasa.gov/feed/", "weight": 2 }
+      ]
+    },
+    {
+      "key": "health",
+      "title": "Health",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml", "weight": 3 },
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/health/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/society/health/rss", "weight": 2 },
+        { "source": "NPR", "url": "https://feeds.npr.org/1128/rss.xml", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/health", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Sports",
+      "feeds": [
+        { "source": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/sport/rss", "weight": 2 },
+        { "source": "CBS Sports", "url": "https://www.cbssports.com/rss/headlines/", "weight": 2 },
+        { "source": "Yahoo Sports", "url": "https://sports.yahoo.com/rss/", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "Entertainment",
+      "feeds": [
+        { "source": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml", "weight": 3 },
+        { "source": "BBC", "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml", "weight": 2 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/culture/rss", "weight": 2 },
+        { "source": "CBS News", "url": "https://www.cbsnews.com/latest/rss/entertainment", "weight": 2 },
+        { "source": "Variety", "url": "https://variety.com/feed/", "weight": 2 }
+      ]
+    }
+  ]
+}

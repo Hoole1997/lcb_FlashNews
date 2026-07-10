@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "À la une",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/rss/une.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/rss", "weight": 3 },
+        { "source": "RFI", "url": "https://www.rfi.fr/fr/rss", "weight": 2 },
+        { "source": "Le Figaro", "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "France",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/politique/rss_full.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/france/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "Monde",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/international/rss_full.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/europe/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Économie",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/economie/rss_full.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/%C3%A9co-tech/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Technologie",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/pixels/rss_full.xml", "weight": 3 },
+        { "source": "Numerama", "url": "https://www.numerama.com/feed/", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Sports",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/sport/rss_full.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/sports/rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "Culture",
+      "feeds": [
+        { "source": "Le Monde", "url": "https://www.lemonde.fr/culture/rss_full.xml", "weight": 3 },
+        { "source": "France 24", "url": "https://www.france24.com/fr/culture/rss", "weight": 2 }
+      ]
+    }
+  ]
+}

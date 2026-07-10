@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "주요 뉴스",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/headlineRssFeed.do?plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/news.xml", "weight": 3 },
+        { "source": "BBC 코리아", "url": "https://feeds.bbci.co.uk/korean/rss.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "정치",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/politics.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "국제",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=07&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/international.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "경제",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/economy.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "생활·과학",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=08&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/industry.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "스포츠",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=09&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/sports.xml", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "연예",
+      "feeds": [
+        { "source": "SBS 뉴스", "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=14&plink=RSSREADER", "weight": 3 },
+        { "source": "연합뉴스", "url": "https://www.yna.co.kr/rss/entertainment.xml", "weight": 2 }
+      ]
+    }
+  ]
+}

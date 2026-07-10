@@ -17,7 +17,9 @@ class DefaultAdLoadingDialogRenderer : AdLoadingDialogRenderer {
         view.findViewById<TextView>(R.id.tv_loading_text)?.text = text
     }
 
-    override fun findCloseView(view: View): View? = null
+    override fun findCloseView(view: View): View? {
+        return view.findViewById(R.id.btn_ad_loading_close)
+    }
 
     override fun onDestroy(view: View) = Unit
 }

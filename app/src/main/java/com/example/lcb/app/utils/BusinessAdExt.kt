@@ -9,11 +9,19 @@ import com.android.common.bill.ads.ext.AdShowExt
 import com.android.common.bill.ui.NativeAdStyleType
 import kotlinx.coroutines.launch
 
+/** 业务广告场景名集中维护，保证广告平台按真实入口区分数据。 */
+object NativeAdPosition {
+    const val HOME_FEED = "home_feed"
+    const val FAVORITES_FEED = "favorites_feed"
+    const val ME_SETTINGS = "me_settings"
+}
+
 fun FragmentActivity.loadNative(
     container: ViewGroup,
     styleType: NativeAdStyleType = NativeAdStyleType.STANDARD,
     condition: () -> Boolean = { true },
-    call: (Boolean) -> Unit = {}
+    call: (Boolean) -> Unit = {},
+    position: String? = null
 ) {
     lifecycleScope.launch {
         try {
@@ -26,7 +34,8 @@ fun FragmentActivity.loadNative(
             val success = AdShowExt.showNativeAdInContainer(
                 context = container.context,
                 container = container,
-                styleType = styleType
+                styleType = styleType,
+                position = position
             )
 
             if (success) {

@@ -1,3 +1,48 @@
 <resources>
-    <string name="app_name">LCB_Template</string>
+    <string name="flash_loading_more_stories">Loading more stories</string>
+    <string name="flash_initial_loading_news">Preparing the latest edition…</string>
+    <string name="flash_time_just_now">Just now</string>
+    <string name="flash_time_minutes_ago">%1$d min ago</string>
+    <string name="flash_time_hours_ago">%1$d hr ago</string>
+    <string name="flash_web_error_title">Page unavailable</string>
+    <string name="flash_web_error_message">Check your connection or open this story in your browser.</string>
+    <string name="flash_web_error_retry">Try again</string>
+    <string name="flash_web_error_open_browser">Open in browser</string>
+    <string name="app_name" translatable="false">FlashNews</string>
+    <string name="flash_cd_back">Back</string>
+    <string name="flash_cd_close">Close</string>
+    <string name="flash_cd_bookmark">Bookmark</string>
+    <string name="flash_cd_weather_entry">Weather, %1$s</string>
+    <string name="flash_weather_placeholder" translatable="false">--°</string>
+    <string name="flash_news_open_original">Original</string>
+    <string name="flash_news_platform_source">Source: %1$s</string>
+    <string name="flash_nav_home">Home</string>
+    <string name="flash_nav_favorites">Favorites</string>
+    <string name="flash_nav_me">Me</string>
+    <string name="flash_home_headlines">Headlines</string>
+    <string name="flash_favorites_title">Favorites</string>
+    <string name="flash_favorites_empty">No saved news yet</string>
+    <string name="flash_favorites_empty_desc">Stories you bookmark will appear here.</string>
+    <string name="flash_settings_title">Settings</string>
+    <string name="flash_setting_language">Language</string>
+    <string name="flash_setting_language_default">System</string>
+    <string name="flash_setting_privacy">Privacy</string>
+    <string name="flash_setting_feedback">Feedback</string>
+    <string name="flash_setting_version">Version</string>
+    <string name="flash_setting_offline_reading">Offline reading</string>
+    <string name="flash_feedback_subject">%1$s Feedback</string>
+    <string name="flash_feedback_chooser_title">Send feedback</string>
+    <string name="flash_feedback_open_failed">No email app available</string>
+    <string name="flash_privacy_open_failed">No browser available</string>
+    <string name="flash_language_title">Language</string>
+    <string name="flash_default_cover_badge" translatable="false">NEWS</string>
+    <string name="flash_ad_label">Ad</string>
+    <string name="flash_ad_label_upper">AD</string>
+    <string name="flash_ad_cta_install">INSTALL</string>
+    <string name="flash_ad_cta_open">Open</string>
+    <string name="flash_ad_loading">Loading ad...</string>
+    <string name="flash_ad_test_google">Google Ads</string>
+    <string name="flash_ad_test_pangle">Pangle Ads</string>
+    <string name="flash_ad_test_topon">TopOn Ads</string>
+    <string name="flash_ad_test_desc">Ad preview</string>
 </resources>

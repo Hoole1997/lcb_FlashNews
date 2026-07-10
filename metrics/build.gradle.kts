@@ -11,6 +11,8 @@ android {
 
     defaultConfig {
         minSdk = 26
+        // 将 Metrics 的反射保留规则传递给最终启用 R8 的宿主 App。
+        consumerProguardFiles("consumer-rules.pro")
         buildConfigField("String", "ADJUST_APP_TOKEN", "\"${analyticsConfig?.get("adjustAppToken") ?: ""}\"")
         buildConfigField("String", "THINKING_DATA_APP_ID", "\"${analyticsConfig?.get("thinkingDataAppId") ?: ""}\"")
         buildConfigField("String", "THINKING_DATA_SERVER_URL", "\"${analyticsConfig?.get("thinkingDataServerUrl") ?: ""}\"")

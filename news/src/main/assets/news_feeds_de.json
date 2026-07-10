@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "cacheTtlMinutes": 10,
+  "categories": [
+    {
+      "key": "top",
+      "title": "Top-Meldungen",
+      "feeds": [
+        { "source": "Tagesschau", "url": "https://www.tagesschau.de/xml/rss2/", "weight": 3 },
+        { "source": "ZEIT Online", "url": "https://newsfeed.zeit.de/index", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/schlagzeilen/index.rss", "weight": 3 },
+        { "source": "DW Deutsch", "url": "https://rss.dw.com/rdf/rss-de-all", "weight": 2 }
+      ]
+    },
+    {
+      "key": "local",
+      "title": "Deutschland",
+      "feeds": [
+        { "source": "Tagesschau", "url": "https://www.tagesschau.de/inland/index~rss2.xml", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/politik/deutschland/index.rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "world",
+      "title": "Welt",
+      "feeds": [
+        { "source": "Tagesschau", "url": "https://www.tagesschau.de/ausland/index~rss2.xml", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/ausland/index.rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "business",
+      "title": "Wirtschaft",
+      "feeds": [
+        { "source": "Tagesschau", "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/wirtschaft/index.rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "technology",
+      "title": "Wissen & Technik",
+      "feeds": [
+        { "source": "Tagesschau", "url": "https://www.tagesschau.de/wissen/index~rss2.xml", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/netzwelt/index.rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "sports",
+      "title": "Sport",
+      "feeds": [
+        { "source": "Sportschau", "url": "https://www.sportschau.de/index~rss2.xml", "weight": 3 },
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/sport/index.rss", "weight": 2 }
+      ]
+    },
+    {
+      "key": "entertainment",
+      "title": "Kultur",
+      "feeds": [
+        { "source": "Der Spiegel", "url": "https://www.spiegel.de/kultur/index.rss", "weight": 3 }
+      ]
+    }
+  ]
+}
