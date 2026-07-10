@@ -46,7 +46,15 @@ fun secretValue(name: String): String {
         ?: System.getenv(name)?.trim().orEmpty()
 }
 
-fun resolveSigningFile(path: String) = file(path).takeIf { it.isAbsolute } ?: rootProject.file(path)
+/**
+ * 签名文件路径统一以仓库根目录为相对基准。
+ * 不能先调用 Project.file(path) 判断绝对路径，因为它会先按 app 模块解析，
+ * 导致 CI 传入 app/src/... 时错误地指向 app/app/src/...。
+ */
+fun resolveSigningFile(path: String): File {
+    val configuredFile = File(path)
+    return if (configuredFile.isAbsolute) configuredFile else rootProject.file(path)
+}
 
 fun googleServicesPackageName(flavor: String): String? {
     val servicesFile = file("src/$flavor/google-services.json")
@@ -85,10 +93,6 @@ val hasGoogleReleaseSigning = googleReleaseKeystoreFile.isFile &&
     googleReleaseStorePassword.isNotEmpty() &&
     googleReleaseKeyAlias.isNotEmpty() &&
     googleReleaseKeyPassword.isNotEmpty()
-val requiresGoogleReleaseSigning = gradle.startParameter.taskNames.any { taskName ->
-    val lowerTaskName = taskName.lowercase()
-    lowerTaskName.contains("google") && lowerTaskName.contains("release")
-}
 val googleReleaseAabName = "lcb_template_release_$resolvedVersionName.aab"
 val releaseMinifyEnabled = booleanGradleProperty("android.release.minifyEnabled", true)
 val releaseShrinkResourcesEnabled = booleanGradleProperty("android.release.shrinkResourcesEnabled", false)
@@ -187,15 +191,9 @@ android {
         release {
             isMinifyEnabled = releaseMinifyEnabled
             isShrinkResources = releaseMinifyEnabled && releaseShrinkResourcesEnabled
-            if (hasGoogleReleaseSigning || requiresGoogleReleaseSigning) {
+            // 签名是可选能力：CI 首次运行会自动创建；本地缺少签名时仍可产出 unsigned 包。
+            if (hasGoogleReleaseSigning) {
                 signingConfig = signingConfigs.getByName("googleRelease")
-            }
-            if (requiresGoogleReleaseSigning && !hasGoogleReleaseSigning) {
-                throw GradleException(
-                    "Missing google release signing config. Ensure app/src/google/google-release.keystore exists or set " +
-                        "ANDROID_SIGNING_STORE_FILE, ANDROID_SIGNING_STORE_PASSWORD, ANDROID_SIGNING_KEY_ALIAS, " +
-                        "and ANDROID_SIGNING_KEY_PASSWORD."
-                )
             }
             proguardFiles(
                 getDefaultProguardFile(releaseDefaultProguardFile),

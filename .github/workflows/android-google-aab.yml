@@ -22,7 +22,6 @@ jobs:
 
     env:
       KEYSTORE_REPO_PATH: app/src/google/google-release.keystore
-      KEYSTORE_GRADLE_PATH: app/src/google/google-release.keystore
       KEYSTORE_ALIAS: google
       KEYSTORE_PASSWORD: google123456
       KEY_PASSWORD: google123456
@@ -98,23 +97,30 @@ jobs:
 
           if [ -f "$KEYSTORE_REPO_PATH" ] && [ -s "$KEYSTORE_REPO_PATH" ]; then
             echo "Using existing keystore: $KEYSTORE_REPO_PATH"
-            echo "created=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            CREATED=false
+          else
+            keytool -genkeypair \
+              -v \
+              -storetype PKCS12 \
+              -keystore "$KEYSTORE_REPO_PATH" \
+              -storepass "$KEYSTORE_PASSWORD" \
+              -keypass "$KEY_PASSWORD" \
+              -alias "$KEYSTORE_ALIAS" \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 36500 \
+              -dname "CN=Google Release, OU=Mobile, O=GitHub Actions, L=San Francisco, S=CA, C=US"
+            CREATED=true
           fi
 
-          keytool -genkeypair \
-            -v \
-            -storetype PKCS12 \
+          # 创建或复用后立即验证，避免到 Gradle 打包阶段才发现签名损坏。
+          keytool -list \
             -keystore "$KEYSTORE_REPO_PATH" \
             -storepass "$KEYSTORE_PASSWORD" \
-            -keypass "$KEY_PASSWORD" \
-            -alias "$KEYSTORE_ALIAS" \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 36500 \
-            -dname "CN=Google Release, OU=Mobile, O=GitHub Actions, L=San Francisco, S=CA, C=US"
+            -alias "$KEYSTORE_ALIAS" > /dev/null
 
-          echo "created=true" >> "$GITHUB_OUTPUT"
+          echo "created=$CREATED" >> "$GITHUB_OUTPUT"
+          echo "ANDROID_SIGNING_STORE_FILE=$GITHUB_WORKSPACE/$KEYSTORE_REPO_PATH" >> "$GITHUB_ENV"
 
       - name: Commit generated keystore to main
         if: steps.ensure_keystore.outputs.created == 'true'
@@ -198,7 +204,6 @@ jobs:
 
       - name: Build signed googleRelease AAB
         env:
-          ANDROID_SIGNING_STORE_FILE: ${{ env.KEYSTORE_GRADLE_PATH }}
           ANDROID_SIGNING_STORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}
           ANDROID_SIGNING_KEY_ALIAS: ${{ env.KEYSTORE_ALIAS }}
           ANDROID_SIGNING_KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
