@@ -6,14 +6,14 @@ import com.example.lcb.app.news.ui.NewsDetailActivity
 import com.example.lcb.app.weather.ad.WeatherInterstitialGate
 import net.corekit.metrics.adjust.AdjustTracker
 
-class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
+class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
 
     companion object {
 
         var lcbApp: LcbApp? = null
 
         fun backLaunchActivity() {
-            lcbApp?.ultrasafecorehub()
+            lcbApp?.smartsecureprotool()
         }
     }
 
@@ -22,7 +22,7 @@ class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
         lcbApp = this
         LcbAdInitializer.initialize(this)
         WeatherInterstitialGate.install()
-        this.maxquicklitememory {isOrganic, network, campaign, adgroup, creative, jsonResponse ->
+        this.quickcleantoolvault {isOrganic, network, campaign, adgroup, creative, jsonResponse ->
             AdjustTracker.init(
                 context = applicationContext,
                 network = network,
@@ -36,11 +36,11 @@ class LcbApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
 
     }
 
-    override fun scanlitequicktoollocker(): Class<in Any>? {
+    override fun scancorebattery(): Class<in Any>? {
         return MainActivity::class.java as Class<in Any>?
     }
 
-    override fun metaautovault(): List<Class<in Any>?>? {
+    override fun maxlitesafesignal(): List<Class<in Any>?>? {
         // 这里只返回当前业务自己的 Activity；库模块 Activity 由各自模块维护，不在宿主侧混入。
         return listOf(
             MainActivity::class.java,
