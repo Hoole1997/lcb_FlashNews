@@ -14,6 +14,17 @@ object NativeAdPosition {
     const val HOME_FEED = "home_feed"
     const val FAVORITES_FEED = "favorites_feed"
     const val ME_SETTINGS = "me_settings"
+
+    private const val MB_REWARD_VIDEO_ACTIVITY =
+        "com.mbridge.msdk.reward.player.MBRewardVideoActivity"
+    private const val CHARTBOOST_IMPRESSION_ACTIVITY =
+        "com.chartboost.sdk.view.CBImpressionActivity"
+    private const val UNITY_FULLSCREEN_WEB_VIEW_ACTIVITY =
+        "com.unity3d.ads.adplayer.FullScreenWebViewDisplay"
+
+    private const val FIX_MTG = "fix_mtg"
+    private const val STOP_CHARTBOOST_FIX = "stop_chartboost_fix"
+    private const val STOP_UNITY_FIX = "stop_unity_fix"
 }
 
 fun FragmentActivity.loadNative(
@@ -57,18 +68,20 @@ fun FragmentActivity.loadInterstitial(
     call: (Boolean) -> Unit
 ) {
     lifecycleScope.launch {
+        AdActivityLaunchFix.register(this@loadInterstitial)
         try {
             if (!condition.invoke()) {
                 call.invoke(false)
                 return@launch
             }
-
             when (AdShowExt.showInterstitialAd(this@loadInterstitial)) {
                 is AdResult.Success -> call.invoke(true)
                 is AdResult.Failure -> call.invoke(false)
             }
         } catch (_: Exception) {
             call.invoke(false)
+        } finally {
+            AdActivityLaunchFix.unregister(this@loadInterstitial)
         }
     }
 }

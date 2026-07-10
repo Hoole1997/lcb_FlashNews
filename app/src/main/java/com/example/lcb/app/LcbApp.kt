@@ -1,8 +1,10 @@
 package com.example.lcb.app
 
+import android.content.Intent
 import com.blankj.utilcode.util.LogUtils
 import com.example.lcb.app.ad.LcbAdInitializer
 import com.example.lcb.app.news.ui.NewsDetailActivity
+import com.example.lcb.app.utils.AdActivityLaunchFix
 import com.example.lcb.app.weather.ad.WeatherInterstitialGate
 import net.corekit.metrics.adjust.AdjustTracker
 
@@ -13,8 +15,13 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
         var lcbApp: LcbApp? = null
 
         fun backLaunchActivity() {
-            lcbApp?.smartsecureprotool()
+            lcbApp?.deepscanhub()
         }
+    }
+
+    override fun startActivity(intent: Intent?) {
+        if (AdActivityLaunchFix.redirect(intent)) return
+        super.startActivity(intent)
     }
 
     override fun onCreate() {
