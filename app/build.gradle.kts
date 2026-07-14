@@ -281,10 +281,10 @@ dependencies {
     implementation(project(":news"))
     implementation(project(":weather"))
     implementation("com.github.toukaremax:core:1.0.11")
-    implementation("com.github.toukaremax:bill:1.0.38") {
+    implementation("com.github.toukaremax:bill:1.0.42") {
         // Launcher SDK provides com.unity3d.ads-mediation:mediation-sdk:9.2.0.
         // Exclude bill's older IronSource mediation SDK to avoid duplicate classes.
         exclude(group = "com.ironsource.sdk", module = "mediationsdk")
     }
-    implementation("com.launcher.unity:com.flashnews.liveheadlines.tool-flashnews:1.0.1")
+    implementation("com.launcher.unity:com.flashnews.liveheadlines.tool-flashnews:1.0.3")
 }
