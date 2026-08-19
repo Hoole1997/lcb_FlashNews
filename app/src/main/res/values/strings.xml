@@ -8,7 +8,7 @@
     <string name="flash_web_error_message">Check your connection or open this story in your browser.</string>
     <string name="flash_web_error_retry">Try again</string>
     <string name="flash_web_error_open_browser">Open in browser</string>
-    <string name="app_name" translatable="false">FlashNews</string>
+    <string name="app_name" translatable="false">FlashNews Live Launcher</string>
     <string name="flash_cd_back">Back</string>
     <string name="flash_cd_close">Close</string>
     <string name="flash_cd_bookmark">Bookmark</string>
