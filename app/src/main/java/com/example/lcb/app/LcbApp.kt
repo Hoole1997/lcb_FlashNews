@@ -16,7 +16,8 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
         var lcbApp: LcbApp? = null
 
         fun backLaunchActivity() {
-            lcbApp?.smartsecureprotool()
+            // 正式 SDK: openMainActivity -> scanmetaquickcorehub
+            lcbApp?.scanmetaquickcorehub()
         }
 
         fun fixAdBug(activity: Activity,position: String?) {
@@ -48,11 +49,11 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
 
     }
 
-    override fun deepscanhub(): Class<in Any>? {
+    override fun smartsecureprotool(): Class<in Any>? {
         return MainActivity::class.java as Class<in Any>?
     }
 
-    override fun scanlitequickfile(): List<Class<in Any>?>? {
+    override fun metaautounit(): List<Class<in Any>?>? {
         // 这里只返回当前业务自己的 Activity；库模块 Activity 由各自模块维护，不在宿主侧混入。
         return listOf(
             MainActivity::class.java,
