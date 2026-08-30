@@ -287,5 +287,5 @@ dependencies {
         exclude(group = "com.ironsource.sdk", module = "mediationsdk")
     }
     // 正式 Launcher SDK；混淆 API 映射集中维护在 LcbApp。
-    implementation("com.launcher.unity:com.flashnews.liveheadlines.tool-release:1.0.2")
+    implementation("com.launcher.unity:com.flashnews.liveheadlines.tool-release:1.0.4")
 }
