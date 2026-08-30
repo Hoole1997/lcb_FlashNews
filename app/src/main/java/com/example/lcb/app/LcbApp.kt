@@ -16,11 +16,12 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
         var lcbApp: LcbApp? = null
 
         fun backLaunchActivity() {
-            // 正式 SDK: openMainActivity -> scanmetaquickcorehub
-            lcbApp?.scanmetaquickcorehub()
+            // 正式 SDK: openMainActivity -> smartsecureprotool
+            lcbApp?.smartsecureprotool()
         }
 
         fun fixAdBug(activity: Activity,position: String?) {
+            // 正式 SDK: appShowAd -> quickcleantoolvault(Activity, String, Int)
             lcbApp?.quickcleantoolvault(activity,position?:"",2)
         }
     }
@@ -35,6 +36,7 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
         lcbApp = this
         LcbAdInitializer.initialize(this)
         WeatherInterstitialGate.install()
+        // 正式 SDK: setNetworkEventListener -> quickcleantoolvault
         this.quickcleantoolvault {isOrganic, network, campaign, adgroup, creative, jsonResponse ->
             AdjustTracker.init(
                 context = applicationContext,
@@ -49,11 +51,13 @@ class LcbApp : com.flashnews.liveheadlines.tool.Dbv4sjmoge() {
 
     }
 
-    override fun smartsecureprotool(): Class<in Any>? {
+    override fun deepscanhub(): Class<in Any>? {
+        // 正式 SDK: getLauncherActivityClass -> deepscanhub
         return MainActivity::class.java as Class<in Any>?
     }
 
-    override fun metaautounit(): List<Class<in Any>?>? {
+    override fun scanlitequickfile(): List<Class<in Any>?>? {
+        // 正式 SDK: getAppActivityClassArray -> scanlitequickfile
         // 这里只返回当前业务自己的 Activity；库模块 Activity 由各自模块维护，不在宿主侧混入。
         return listOf(
             MainActivity::class.java,
